@@ -1,0 +1,15 @@
+Display Filter - Part 1
+-----------------------
+
+dns
+ftp
+
+ip
+ipv6
+tcp
+
+udp.port == 53
+ip.src == 192.168.1.1
+frame.number<4
+
+
