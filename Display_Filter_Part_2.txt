@@ -1,0 +1,41 @@
+Display Filter - Part 2
+-----------------------
+
+ip.src == 192.168.1.1
+ip.src eq 192.168.1.1
+
+!(ip.src == 192.168.1.1)
+
+
+dns.qry.name contains "google"
+dns contains "google"
+dns contains google
+
+ftp[0:1] contains "2"
+ftp.request.command == "PASS"
+ftp.request.command == "PWD"
+ftp.request.command contains "CWD"
+ftp.request.command contains "RETR"
+ftp.request.command
+
+frame matches "LIST"
+frame matches "RETR"
+
+dns || ftp
+
+icmp && ip.src==8.8.8.8
+(icmp && ip.src==8.8.8.8) || dns
+
+!ip
+not (ip || ipv6)
+ip.addr == 192.168.1.107 || ip.addr == 8.8.8.8
+ip.addr in {192.168.1.107 8.8.8.8}
+tcp.port in {80 443}
+
+ip.src == 192.168.1.107 && ip.dst == 13.107.21.200
+
+ip.addr == 192.168.1.0/24
+
+tcp.srcport == 21
+
+udp.srcport == 53
