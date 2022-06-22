@@ -1,0 +1,24 @@
+﻿Display Filter - Tuning
+-----------------------
+ip.src == 192.168.1.107 && ip.dst == 13.107.21.200
+
+ip.addr == 192.168.1.0/24
+
+tcp.srcport == 21
+
+udp.srcport == 53
+
+grün	Filter ist in Ordnung
+
+rot	Filter ist nicht korrekt
+
+gelb	Filter ist unvollständig (Beispiel fehlende Klammer)
+ftp || dns && ip.addr == 192.168.1.1
+
+
+tcp.hdr_len == 20
+tcp.flags.syn == 1
+
+
+(ip.host == 192.168.1.1) && !(dns)
+
